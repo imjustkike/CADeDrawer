@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --cad-bg: #F5F6F8;
+    --cad-surface: #FFFFFF;
+    --cad-surface-subtle: #F8FAFC;
+    --cad-border: #D8DDE5;
+    --cad-border-subtle: #E2E8F0;
+    --cad-text: #1E293B;
+    --cad-text-muted: #64748B;
+    --cad-accent: #2563EB;
+    --cad-accent-hover: #1D4ED8;
+    --cad-accent-subtle: #EFF6FF;
+    --cad-warning: #B45309;
+    --cad-error: #B91C1C;
+    --cad-success: #15803D;
+    --cad-powered: #10B981;
+    --cad-active: #059669;
+
+    --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  input, textarea, [contenteditable="true"] {
+    user-select: text;
+    -webkit-user-select: text;
+  }
+
+  body {
+    font-family: var(--font-system);
+    background-color: var(--cad-bg);
+    color: var(--cad-text);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    font-size: 13px;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #root {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+
+/* Custom scrollbars for technical CAD look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Tabular figures for technical numbers */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-mono);
+}
